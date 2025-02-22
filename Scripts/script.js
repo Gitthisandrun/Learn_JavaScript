@@ -1,34 +1,18 @@
-let message = "Привет мир"
-console.log("message", message);
-console.log(typeof message);
-console.log("===+===");
+let oneNumber = prompt('Введите первое число', 0).trim()
+let twoNumber = prompt('Введите второе число', 0).trim()
+if(Boolean (oneNumber) == false ||Boolean (twoNumber) == false) {
+  alert(`Вы ничего не ввели`)
+} else if(isNaN(+oneNumber) || isNaN(+twoNumber)) {
+alert(`Введите числовое значение`)
+} else { 
+  oneNumber = +oneNumber
+  twoNumber = +twoNumber
 
-
-let money = 8888
-console.log("money", money);
-console.log(typeof money);
-console.log("===+===");
-
-
-let bigMoney = 1000000000000000000000000000000
-console.log("bigMoney", bigMoney);
-console.log(typeof bigMoney);
-console.log("===+===");
-
-
-let isShow = 888 > 777
-console.log("isShow", isShow);
-console.log(typeof isShow);
-console.log("===+===");
-
-
-let Tasklist = null
-console.log("Tasklist", Tasklist);
-console.log(typeof Tasklist);
-console.log("===+===");
-
-
-let TaskOne = undefined
-console.log("TaskOne", TaskOne);
-console.log(typeof TaskOne);
-console.log("===+===");
+alert(`
+  Результат операции: ${oneNumber} + ${twoNumber} = ${oneNumber + twoNumber}
+  Результат операции: ${oneNumber} - ${twoNumber} = ${oneNumber - twoNumber}
+  Результат операции: ${oneNumber} * ${twoNumber} = ${oneNumber * twoNumber}
+  Результат операции: ${oneNumber} / ${twoNumber} = ${oneNumber / twoNumber}
+  Результат операции: ${oneNumber} % ${twoNumber} = ${oneNumber % twoNumber}
+  `);
+}
