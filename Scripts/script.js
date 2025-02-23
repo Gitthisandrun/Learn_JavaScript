@@ -1,2 +1,16 @@
-let text = ' я СтуденТ КуРса JavaSCRIPT рoзрoботкэ '
-alert(text.toLowerCase())
+let text = ' привет я СтуденТ КуРса JavaSCRIPT Розроботкэ '.trim().toLowerCase()
+let newtext = text.replace('розроботкэ', 'разработчик')
+
+newtext = newtext.split('')
+newtext[0] = newtext[0].toUpperCase()
+newtext = newtext.join('')
+username = prompt('Введите ваше имя', 'иВАН').trim().toLowerCase()
+username = username.split('')
+username[0] = username[0].toUpperCase()
+username.push(',')
+username = username.join('')
+
+newtext = newtext.split(' ')
+newtext.splice(2, 0, username)
+newtext = newtext.join(' ')
+alert(newtext)
